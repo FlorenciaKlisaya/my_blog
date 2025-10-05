@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Catálogo — Hermanos Jota</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS del catálogo -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/productos.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header del catálogo -->
+    <header>
+        <!-- Menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+        <!-- Logo -->
+        <a href="../index.html" class="logo" aria-label="Ir a la página principal de Hermanos Jota">
+            <img src="../img/logo.svg" alt="Logo de Hermanos Jota">
+        </a>
+
+        <!-- Menú principal (desplegable) -->
+        <nav class="nav-primary" aria-label="Menú principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html" class="is-active">Productos</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Acciones de usuario -->
+        <nav class="nav-user-actions" aria-label="Acciones de usuario">
+            <button class="icon-btn" aria-label="Mi cuenta">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Carrito de compras">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+                </svg>
+                <span class="badge">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Panel lateral del carrito -->
+    <aside class="cart-drawer" aria-hidden="true">
+        <div class="cart-drawer__header">
+            <h2>Mi carrito</h2>
+            <button class="cart-drawer__close" aria-label="Cerrar carrito">×</button>
+        </div>
+        <div class="cart-drawer__body">
+            <p>Tu carrito está vacío.</p>
+        </div>
+    </aside>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Catálogo</h1>
+            <label for="search" class="sr-only">Buscar productos</label>
+            <input id="search" class="search" type="search" placeholder="Buscar por nombre o categoría…" autocomplete="off" />
+            <p class="search-help">Escribí para filtrar. Enter limpia.</p>
+            
+            <div class="status" aria-live="polite">
+                <span id="count">0</span> productos
+            </div>
+        </div>
+
+        <!-- Acá se inyecta el catálogo por categoría con carruseles -->
+        <main id="grid" aria-label="Catálogo por categoría">
+            <noscript>Activá JavaScript para ver el catálogo.</noscript>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1: Marca / Descripción -->
+            <div class="footer-col">
+                <h3 class="footer-title">Hermanos Jota</h3>
+                <p class="footer-desc">Diseño argentino contemporáneo con énfasis en materiales nobles y fabricación artesanal.</p>
+            </div>
+            
+            <!-- Columna 2: Contacto físico -->
+            <div class="footer-col">
+                <h4>Showroom</h4>
+                <p>Av. Corrientes 1234<br>Buenos Aires, Argentina</p>
+                <p><strong>Horarios:</strong><br>
+                    Lun - Vie: 9:00 – 18:00<br>
+                    Sáb: 10:00 – 14:00
+                </p>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>¿Tenés consultas o querés coordinar una visita?<br>
+                    <a href="./contacto.html">Visitá nuestra página de contacto &rarr;</a>
+                </p>
+            </div>
+
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hermanos Jota — Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/datos-productos.js" defer></script>   <!-- datos -->
+    <script src="../js/productos.js" defer></script>         <!-- lógica personalizada -->
+    <script src="../js/main.js"></script>                    <!-- lógica global -->
+    
+</body>
+</html>
