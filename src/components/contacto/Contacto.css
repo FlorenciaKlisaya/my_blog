@@ -1,0 +1,46 @@
+.formulario-contacto {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  max-width: 540px;
+  margin: 2rem auto;
+  color: #3e2c2c;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+}
+
+.boton-enviar {
+  margin-top: 1rem;
+  background-color: #9e7a57;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.mensaje-exito {
+  margin-top: 1rem;
+  background-color: #d7f3e3;
+  color: #2d7a46;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
