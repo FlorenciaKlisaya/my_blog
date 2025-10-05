@@ -1,0 +1,131 @@
+/* ================================
+LAYOUT DE PRODUCTOS
+================================== */
+.page {
+    padding: 40px 20px;
+}
+
+.layout-leftpic,
+.layout-rightpic {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.layout-leftpic .product-img,
+.layout-rightpic .product-img {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.layout-leftpic .product-info,
+.layout-rightpic .product-info {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+/* Imagen */
+.product-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+INFO DE PRODUCTO
+================================== */
+.product-info h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--siena);
+}
+
+.product-info .desc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+    text-align: justify;
+    font-family: var(--font-body);
+}
+
+/* Tabla de especificaciones */
+.specs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+.specs th {
+    background: var(--alabastro);
+    color: var(--siena);
+    text-align: left;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+
+.specs td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--card-border);
+    color: var(--ink);
+}
+
+/* Precio */
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--siena);
+    margin-bottom: 1.5rem;
+}
+
+/* Botón Añadir al Carrito */
+.add-cart {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--siena);
+    color: var(--alabastro);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.add-cart:hover {
+    background: #8b3f1e; /* opción más oscura de siena */
+    transform: translateY(-2px);
+}
+
+/* === TOAST === */
+
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--siena);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.toast.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
